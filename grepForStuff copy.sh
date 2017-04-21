@@ -4,7 +4,6 @@ filename="$1"
 
 tcpdump -Ar $filename| grep -v 'TCP' | grep -v 'HTTP' | grep -v 'seq' > httpdata.txt
 echo $filename
-echo $filename > httpdata.txt
 
 echo "-Looking for lat=, latitude="
 egrep -io "[^a-zA-Z]?lat([^a-zA-Z]|itude).*[0-9]+(\.?)[0-9]+" httpdata.txt | sort | uniq -c
