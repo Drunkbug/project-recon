@@ -1,0 +1,13 @@
+TencentQQ: 89
+Weibo: 1
+Icloud: 67
+GitHub: 1
+Adobe: 17
+Apple: 736
+Twitter: 1
+Amazon: 163
+Google: 1160
+Taobao: 4
+Akamai: 498
+Facebook: 267
+Yahoo!: 8
