@@ -1,0 +1,44 @@
+Project Recon
+Student Name: Leyi Qiang
+ccis ID: drunkbug
+
+This data analysis report for project Recon, to collect the data, I used Recon on 
+IOS10 for over one week and executed them at least 3-5 minutes everyday.
+
+====================================================================
+Task1:
+I edited mitm2log.py and let it read file path as input,
+then execute all the *.dump file under that directory, and returns
+the accumulated contacted domain list.
+To find the identities of each contanted domain, I created domain_analysis.py, which 
+uses socket and whatis command to find identities in the contacted domain list. 
+apps_count.py is used to count number of sites contacted by each app.
+
+Questions:
+How many sites are contacted by each app that you use?
+By using scripts I mentioned above, I got a list of app - #sites map:
+    TencentQQ: 89
+    Weibo: 1
+    Icloud: 67
+    GitHub: 1
+    Adobe: 17
+    Apple: 736 
+    Twitter: 1
+    Amazon: 163 
+    Google: 1160
+    Taobao: 4
+    Akamai: 498 
+    Facebook: 267 
+    Yahoo!: 8
+
+Does that traffic seem legitimate?
+Yes, most of the traffic are the apps/websites I used during the week. Since I used
+iphone for testing, there are many traffic goes through Apple, such as App store and 
+IMessage. Also during the peroid I used goole and gmail frequently. 
+Thus it is not surprising that most of the traffic were from Apple and Google.
+
+Is there anything surprising in your data?
+I'm pretty surprised that Akamai provided a large amount of traffic during the 
+test. It seems Akamai provided a lot of CDN service and traffic.
+
+
