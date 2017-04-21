@@ -18,6 +18,7 @@ import random
 import string
 import glob
 import os
+from domain_analysis import analysis_domains
 table_header = """#fields       ts      uid     id.orig_h       id.orig_p       id.resp_h       id.resp_p       trans_depth     method  host
 uri     referrer        user_agent      request_body_len        response_body_len       status_code     status_msg      info_code
 info_msg        filename        tags    username        password        proxied orig_fuids      orig_mime_types resp_fuids
@@ -26,6 +27,7 @@ client_header_names     client_header_values    server_header_names     server_h
 """.replace('\n', '\t').strip()
 
 def main():
+    owd = os.getcwd()
     if len(sys.argv) < 2:
         print 'Usage: python %s dump_file [log_file_prefix]' % sys.argv[0]
         print '\nBy default, log_file_prefix=dump_file[:-5]'
@@ -48,6 +50,8 @@ def main():
     #print 'converting %s to %s_http(s).log' % (dump_file, log_file_prefix)
     result = run(dump_files)
     pprint.pprint(result)
+    os.chdir(owd)
+    analysis_domains(result['contacted'])
 
 
 def run(dump_files):
