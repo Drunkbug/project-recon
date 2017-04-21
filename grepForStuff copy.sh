@@ -19,6 +19,8 @@ egrep -io "bjm?????????" httpdata.txt | sort | uniq -c
 egrep -io "klb???????" httpdata.txt | sort | uniq -c
 egrep -io "Pk??????" httpdata.txt | sort | uniq -c
 grep -i "15055198491" httpdata.txt | sort | uniq -c
+grep -i "480956" httpdata.txt | sort | uniq -c
+
 
 echo " Looking for IMEI=  " #generalized imei. commented out because we searched for phone specific.
 egrep -io "[^a-zA-Z]?IMEI[^a-zA-Z]?([:=])+(\"?)[0-9]{15,}" httpdata.txt | sort | uniq -c
