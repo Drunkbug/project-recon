@@ -41,4 +41,10 @@ Is there anything surprising in your data?
 I'm pretty surprised that Akamai provided a large amount of traffic during the 
 test. It seems Akamai provided a lot of CDN service and traffic.
 
-
+====================================================================
+Task2:
+I modified the regex in egrep and grep and added regex format of my password, then I
+added usernames, IMEs of my phones and my phone number. 
+I found my TencentQQ username was leaked several times. Which is one of my important
+personal identity, if the account acquied by any malicious user, I could receive
+spam message and acquire personal information by others easily.
